@@ -51,35 +51,6 @@ const BottomBar = () => {
       </div>
       <div className="flex items-center gap-x-3">
         <SystemMonitor />
-
-        {/* VERSION is defined by webpack, please see next.config.js */}
-        <span className="text-xs text-muted-foreground">
-          Jan v{VERSION ?? ''}
-        </span>
-        <div className="mt-1 flex items-center gap-x-2">
-          {menuLinks
-            .filter((link) => !!link)
-            .map((link, i) => (
-              <div className="relative" key={i}>
-                <Tooltip>
-                  <TooltipTrigger>
-                    <a
-                      href={link.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative flex w-full flex-shrink-0 cursor-pointer items-center justify-center"
-                    >
-                      {link.icon}
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent side="top" sideOffset={10}>
-                    <span>{link.name}</span>
-                    <TooltipArrow />
-                  </TooltipContent>
-                </Tooltip>
-              </div>
-            ))}
-        </div>
       </div>
       <CommandListDownloadedModel />
     </div>
