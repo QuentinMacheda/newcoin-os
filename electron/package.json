@@ -60,7 +60,7 @@
       "include": "scripts/uninstaller.nsh",
       "deleteAppDataOnUninstall": true
     },
-    "artifactName": "jan-${os}-${arch}-${version}.${ext}"
+    "artifactName": "newcoin-${os}-${arch}-${version}.${ext}"
   },
   "scripts": {
     "lint": "eslint . --ext \".js,.jsx,.ts,.tsx\"",
