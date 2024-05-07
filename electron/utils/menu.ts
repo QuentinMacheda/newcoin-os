@@ -12,8 +12,8 @@ const template: (Electron.MenuItemConstructorOptions | Electron.MenuItem)[] = [
         label: `About ${app.name}`,
         click: () =>
           dialog.showMessageBox({
-            title: `Jan`,
-            message: `Jan Version v${app.getVersion()}\n\nCopyright © 2024 Jan`,
+            title: `Newcoin OS`,
+            message: `Newcoin OS Version v${app.getVersion()}\n\nCopyright © 2024 Newcoin OS`,
           }),
       },
       {
