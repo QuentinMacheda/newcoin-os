@@ -1,4 +1,9 @@
 @layer base {
+  html,
+  * {
+    font-family: 'Newfoundation Whyte', sans-serif;
+  }
+
   img {
     pointer-events: none;
   }
@@ -34,5 +39,66 @@
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+
+  // Font
+  @font-face {
+    font-family: 'Newfoundation Whyte';
+    src:
+      url('../../public/fonts/newfoundation/NewfoundationWhyte-Regular.woff2')
+        format('woff2'),
+      url('../../public/fonts/newfoundation/NewfoundationWhyte-Regular.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Newfoundation Whyte';
+    src:
+      url('../../public/fonts/newfoundation/NewfoundationWhyte-Medium.woff2')
+        format('woff2'),
+      url('../../public/fonts/newfoundation/NewfoundationWhyte-Medium.woff')
+        format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Newfoundation Whyte';
+    src:
+      url('../../public/fonts/newfoundation/NewfoundationWhyte-Light.woff2')
+        format('woff2'),
+      url('../../public/fonts/newfoundation/NewfoundationWhyte-Light.woff')
+        format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Newfoundation Whyte Book';
+    src:
+      url('../../public/fonts/newfoundation/NewfoundationWhyte-Book.woff2')
+        format('woff2'),
+      url('../../public/fonts/newfoundation/NewfoundationWhyte-Book.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Newfoundation Whyte';
+    src:
+      url('../../public/fonts/newfoundation/NewfoundationWhyte-Bold.woff2')
+        format('woff2'),
+      url('../../public/fonts/newfoundation/NewfoundationWhyte-Bold.woff')
+        format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
   }
 }
