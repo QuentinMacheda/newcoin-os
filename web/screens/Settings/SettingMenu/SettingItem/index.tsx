@@ -31,7 +31,7 @@ const SettingItem: React.FC<Props> = ({ name, setting }) => {
 
       {isActive && (
         <m.div
-          className="absolute inset-0 -left-3 h-full w-[calc(100%+24px)] rounded-md bg-primary/50"
+          className="absolute inset-0 -left-3 h-full w-[calc(100%+24px)] rounded-md bg-primary/10 dark:bg-primary/40"
           layoutId="active-static-menu"
         />
       )}
