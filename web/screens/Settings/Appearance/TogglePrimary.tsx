@@ -11,7 +11,7 @@ type PrimaryColorOption = {
 const primaryColorOptions: PrimaryColorOption[] = [
   {
     value: 'primary-blue',
-    class: 'bg-blue-500',
+    class: 'bg-gray-500',
   },
   {
     value: 'primary-purple',

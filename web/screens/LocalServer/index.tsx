@@ -418,26 +418,26 @@ const LocalServerScreen = () => {
         </div>
         {firstTimeVisitAPIServer ? (
           <div className="flex h-full items-center justify-center">
-            <div className="w-[335px] rounded-lg border border-blue-600 bg-blue-100 p-6">
+            <div className="w-[335px] rounded-lg border border-primary/20 bg-primary/10 p-6">
               <div className="item-start flex gap-x-4">
                 <svg
                   width="20"
                   height="20"
                   viewBox="0 0 20 20"
                   fill="none"
-                  className="mt-1 flex-shrink-0"
+                  className="mt-1 flex-shrink-0 dark:invert"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 2.11188e-08 4.47715 2.11188e-08 10C2.11188e-08 12.397 0.843343 14.597 2.2495 16.3195L0.292453 18.2929C-0.332289 18.9229 0.110179 20 0.993697 20H10ZM5.5 8C5.5 7.44772 5.94772 7 6.5 7H13.5C14.0523 7 14.5 7.44772 14.5 8C14.5 8.55229 14.0523 9 13.5 9H6.5C5.94772 9 5.5 8.55229 5.5 8ZM6.5 11C5.94772 11 5.5 11.4477 5.5 12C5.5 12.5523 5.94772 13 6.5 13H9.5C10.0523 13 10.5 12.5523 10.5 12C10.5 11.4477 10.0523 11 9.5 11H6.5Z"
-                    fill="#2563EB"
+                    fill="#000000"
                   />
                 </svg>
 
                 <div>
-                  <h6 className="font-medium text-black">
+                  <h6 className="font-medium text-black dark:text-white">
                     Once you start the server, you cannot chat with your
                     assistant.
                   </h6>
@@ -476,7 +476,7 @@ const LocalServerScreen = () => {
               width="18"
               height="18"
               viewBox="0 0 18 18"
-              className="mt-1 flex-shrink-0"
+              className="mt-1 flex-shrink-0 dark:invert"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -484,7 +484,7 @@ const LocalServerScreen = () => {
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M9.00033 17.3337C13.6027 17.3337 17.3337 13.6027 17.3337 9.00033C17.3337 4.39795 13.6027 0.666992 9.00033 0.666992C4.39795 0.666992 0.666992 4.39795 0.666992 9.00033C0.666992 10.9978 1.36978 12.8311 2.54157 14.2666L0.910703 15.9111C0.390085 16.436 0.758808 17.3337 1.49507 17.3337H9.00033ZM5.25033 7.33366C5.25033 6.87342 5.62342 6.50033 6.08366 6.50033H11.917C12.3772 6.50033 12.7503 6.87342 12.7503 7.33366C12.7503 7.7939 12.3772 8.16699 11.917 8.16699H6.08366C5.62342 8.16699 5.25033 7.7939 5.25033 7.33366ZM6.08366 9.83366C5.62342 9.83366 5.25033 10.2068 5.25033 10.667C5.25033 11.1272 5.62342 11.5003 6.08366 11.5003H8.58366C9.0439 11.5003 9.41699 11.1272 9.41699 10.667C9.41699 10.2068 9.0439 9.83366 8.58366 9.83366H6.08366Z"
-                fill="#2563EB"
+                fill="#000000"
               />
             </svg>
 

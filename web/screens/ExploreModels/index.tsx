@@ -68,11 +68,7 @@ const ExploreModelsScreen = () => {
         <div className="h-full">
           <ScrollArea>
             <div className="relative">
-              <img
-                src="./images/hub-banner.png"
-                alt="Hub Banner"
-                className="w-full object-cover"
-              />
+              <div className="flex h-64 w-64 w-full items-center justify-center rounded-xl bg-gradient-to-r from-gray-200 to-gray-400 object-cover"></div>
               <div className="absolute left-1/2 top-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 space-y-2">
                 <div className="flex flex-row space-x-2">
                   <ModelSearch onSearchLocal={onSearchUpdate} />

@@ -29,10 +29,16 @@ import { trayManager } from './managers/tray'
 import { logSystemInfo } from './utils/system'
 import { registerGlobalShortcuts } from './utils/shortcut'
 
+/**
+ * Paths
+ **/
 const preloadPath = join(__dirname, 'preload.js')
 const rendererPath = join(__dirname, '..', 'renderer')
 const quickAskPath = join(rendererPath, 'search.html')
-const mainPath = join(rendererPath, 'index.html')
+
+const entryPath = join(rendererPath, 'index.html')
+const newcoinPath = "https://os.newcoin.org/"
+const janPath = join(rendererPath, 'index.html')
 
 const mainUrl = 'http://localhost:3000'
 const quickAskUrl = `${mainUrl}/search`
@@ -105,7 +111,7 @@ function createQuickAskWindow() {
 }
 
 function createMainWindow() {
-  const startUrl = app.isPackaged ? `file://${mainPath}` : mainUrl
+  const startUrl = app.isPackaged ? `file://${entryPath}` : mainUrl
   windowManager.createMainWindow(preloadPath, startUrl)
 }
 

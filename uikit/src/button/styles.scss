@@ -1,7 +1,7 @@
 .btn {
   @apply inline-flex items-center justify-center whitespace-nowrap rounded-lg font-semibold transition-colors;
   @apply cursor-pointer;
-  @apply focus-within:outline-none focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1;
+  @apply focus-visible:ring-primary focus-within:outline-none focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-offset-1;
   @apply disabled:pointer-events-none disabled:bg-zinc-100 disabled:text-zinc-400;
 
   &-primary {
@@ -9,7 +9,7 @@
   }
 
   &-secondary-blue {
-    @apply bg-blue-200 text-blue-600 hover:bg-blue-300/50 dark:hover:bg-blue-200/80;
+    @apply bg-primary/70 hover:bg-primary/60 dark:hover:bg-primary/60 text-white;
   }
 
   &-danger {

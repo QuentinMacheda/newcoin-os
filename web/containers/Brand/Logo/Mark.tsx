@@ -12,9 +12,9 @@ export default function LogoMark(props: Props) {
     <Image
       width={width}
       height={height}
-      className={className}
+      className={`${className} dark:invert`}
       src="icons/app_icon.svg"
-      alt="Jan - Logo"
+      alt="Newcoin OS - Logo"
     />
   )
 }
