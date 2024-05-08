@@ -29,7 +29,7 @@ const EmptyThread: React.FC = () => {
           <div className="w-auto px-4 py-2">
             <Button
               block
-              className="bg-blue-100 font-bold text-blue-600 hover:bg-blue-100 hover:text-blue-600"
+              className=""
               onClick={() => setMainViewState(MainViewState.Hub)}
             >
               Explore The Hub
