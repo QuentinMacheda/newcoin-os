@@ -37,10 +37,12 @@
     "build:core": "cd core && yarn install && yarn run build",
     "build:web": "yarn workspace @janhq/web build && cpx \"web/out/**\" \"electron/renderer/\"",
     "build:electron": "yarn copy:assets && yarn workspace newcoin build",
+    "build:electron:all": "yarn copy:assets && yarn workspace newcoin build:all",
     "build:electron:test": "yarn workspace newcoin build:test",
     "build:extensions": "rimraf ./pre-install/*.tgz && turbo run @janhq/core#build && cd extensions && yarn install && turbo run build:publish && cd .. && yarn pre-install",
     "build:test": "yarn copy:assets && turbo run @janhq/web#build && cpx \"web/out/**\" \"electron/renderer/\" && turbo run build:test",
     "build": "yarn build:web && yarn build:electron",
+    "build:all": "yarn build:web && yarn build:electron:all",
     "build:publish": "yarn copy:assets && yarn build:web && yarn workspace newcoin build:publish"
   },
   "devDependencies": {
