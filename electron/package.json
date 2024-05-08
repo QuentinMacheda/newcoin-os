@@ -23,13 +23,6 @@
       "scripts",
       "icons"
     ],
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "QuentinMacheda",
-        "repo": "newcoin-os"
-      }
-    ],
     "extends": null,
     "mac": {
       "type": "distribution",
