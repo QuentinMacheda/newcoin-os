@@ -1,11 +1,11 @@
-import BaseLayout from '@/containers/Layout'
+import React from 'react'
 
-import Providers from '@/containers/Providers'
+import EntryContainer from '@/containers/EntryContainer'
 
 export default function Page() {
   return (
-    <Providers>
-      <BaseLayout />
-    </Providers>
+    <>
+      <EntryContainer />
+    </>
   )
 }

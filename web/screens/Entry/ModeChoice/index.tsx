@@ -1,10 +1,14 @@
 'use client'
 
+import Link from 'next/link'
+
 const EntryChoiceScreen = () => {
   return (
-    <div className="flex h-full w-full">
+    <div className="flex h-screen w-screen flex-1 overflow-hidden">
       <div className="w-full">
-        <button>Private Mode</button>
+        <Link href="/jan">
+          <button>Private Mode</button>
+        </Link>
         <button>Online Mode</button>
       </div>
     </div>
