@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
 
 import { join } from 'path'
 /**
@@ -36,9 +36,7 @@ const preloadPath = join(__dirname, 'preload.js')
 const rendererPath = join(__dirname, '..', 'renderer')
 const quickAskPath = join(rendererPath, 'search.html')
 
-const entryPath = join(rendererPath, 'index.html')
-const newcoinPath = "https://os.newcoin.org/"
-const janPath = join(rendererPath, 'index.html')
+const mainPath = join('file://', join(rendererPath, 'index.html'))
 
 const mainUrl = 'http://localhost:3000'
 const quickAskUrl = `${mainUrl}/search`
@@ -111,7 +109,7 @@ function createQuickAskWindow() {
 }
 
 function createMainWindow() {
-  const startUrl = app.isPackaged ? `file://${entryPath}` : mainUrl
+  const startUrl = app.isPackaged ? mainPath : mainUrl
   windowManager.createMainWindow(preloadPath, startUrl)
 }
 

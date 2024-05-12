@@ -41,6 +41,7 @@ const nextConfig = {
         PLATFORM: JSON.stringify(process.platform),
       }),
     ]
+
     return config
   },
 }

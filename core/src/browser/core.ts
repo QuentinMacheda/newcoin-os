@@ -133,6 +133,14 @@ const showToast: (title: string, message: string) => void = (title, message) =>
   globalThis.core.api?.showToast(title, message)
 
 /**
+ * Load an url in the app.
+ * @param {string} url - The url to load.
+ * @returns {Promise<any>} - A promise that resolves when the URL has been successfully loaded.
+ */
+const loadURL: (url: string) => Promise<any> = (url) =>
+  globalThis.core.api?.loadURL(url)
+
+/**
  * Register extension point function type definition
  */
 export type RegisterExtensionPoint = (
@@ -162,4 +170,5 @@ export {
   showToast,
   getFileSize,
   FileStat,
+  loadURL,
 }

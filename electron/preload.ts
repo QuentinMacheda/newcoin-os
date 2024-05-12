@@ -22,8 +22,12 @@ APIEvents.forEach((method) => {
   // The handler for the event is provided as an argument to the function
   interfaces[method] = (handler: any) => ipcRenderer.on(method, handler)
 })
+
 // Expose the 'interfaces' object in the main world under the name 'electronAPI'
 // This allows the renderer process to access these methods directly
 contextBridge.exposeInMainWorld('electronAPI', {
   ...interfaces,
 })
+
+
+

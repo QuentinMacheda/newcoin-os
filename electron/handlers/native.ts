@@ -151,4 +151,10 @@ export function handleAppIPCs() {
     async (_event, heightOffset: number): Promise<void> =>
       windowManager.expandQuickAskWindow(heightOffset)
   )
+
+  // Load the URL in the main window
+  ipcMain.handle(
+    NativeRoute.loadURL, 
+    async (_event, url: string): Promise<any> => windowManager.mainWindow?.loadURL(url)
+  )
 }

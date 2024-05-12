@@ -19,6 +19,8 @@ export enum NativeRoute {
   showMainWindow = 'showMainWindow',
 
   quickAskSizeUpdated = 'quickAskSizeUpdated',
+
+  loadURL = 'loadURL',
 }
 
 /**

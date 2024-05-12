@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import {
   Tooltip,
   TooltipContent,
@@ -13,6 +15,7 @@ import {
   SettingsIcon,
   LayoutGridIcon,
   SquareCodeIcon,
+  Home,
 } from 'lucide-react'
 
 import { twMerge } from 'tailwind-merge'
@@ -38,6 +41,21 @@ export default function RibbonNav() {
   }
 
   const primaryMenus = [
+    {
+      name: 'Home',
+      icon: (
+        <Link href="/">
+          <Home
+            size={20}
+            className={twMerge(
+              'flex-shrink-0 text-muted-foreground',
+              serverEnabled && 'text-gray-300 dark:text-gray-700'
+            )}
+          />
+        </Link>
+      ),
+      state: MainViewState.Home,
+    },
     {
       name: 'Thread',
       icon: (
