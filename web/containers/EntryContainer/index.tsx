@@ -25,7 +25,7 @@ const EntryContainer: React.FC = () => {
       break
 
     default:
-      children = <GetStartedScreen />
+      children = <ModeChoiceScreen />
       break
   }
 
