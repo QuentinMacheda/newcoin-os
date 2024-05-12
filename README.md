@@ -1,15 +1,4 @@
-# Jan - Bring AI to your Desktop
-
-![Jan banner](https://github.com/janhq/jan/assets/89722390/35daac7d-b895-487c-a6ac-6663daaad78e)
-
-<p align="center">
-  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/janhq/jan"/>
-  <img alt="Github Last Commit" src="https://img.shields.io/github/last-commit/janhq/jan"/>
-  <img alt="Github Contributors" src="https://img.shields.io/github/contributors/janhq/jan"/>
-  <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/janhq/jan"/>
-  <img alt="Discord" src="https://img.shields.io/discord/1107178041848909847?label=discord"/>
-</p>
+# Newcoin OS
 
 <p align="center">
   <a href="https://jan.ai/guides">Getting Started</a> 
@@ -19,11 +8,11 @@
   - <a href="https://discord.gg/AsJ8krTT3N">Discord</a>
 </p>
 
-> ⚠️ **Jan is currently in Development**: Expect breaking changes and bugs!
+> ⚠️ **Newcoin OS is currently in Development**: Expect breaking changes and bugs!
 
-Jan is an open-source ChatGPT alternative that runs 100% offline on your computer.
+Newcoin OS is an open-source ChatGPT alternative that runs 100% offline on your computer.
 
-**Jan runs on any hardware.** From PCs to multi-GPU clusters, Jan supports universal architectures:
+**Newcoin OS runs on any hardware.** From PCs to multi-GPU clusters, Newcoin OS supports universal architectures:
 
 - [x] Nvidia GPUs (fast)
 - [x] Apple M-series (fast)
@@ -31,97 +20,14 @@ Jan is an open-source ChatGPT alternative that runs 100% offline on your compute
 - [x] Linux Debian
 - [x] Windows x64
 
-## Download
 
-<table>
-  <tr style="text-align:center">
-    <td style="text-align:center"><b>Version Type</b></td>
-    <td style="text-align:center"><b>Windows</b></td>
-    <td colspan="2" style="text-align:center"><b>MacOS</b></td>
-    <td colspan="2" style="text-align:center"><b>Linux</b></td>
-  </tr>
-  <tr style="text-align:center">
-    <td style="text-align:center"><b>Stable (Recommended)</b></td>
-    <td style="text-align:center">
-      <a href='https://app.jan.ai/download/latest/win-x64'>
-        <img src='https://github.com/janhq/docs/blob/main/static/img/windows.png' style="height:14px; width: 14px" />
-        <b>jan.exe</b>
-      </a>
-    </td>
-    <td style="text-align:center">
-      <a href='https://app.jan.ai/download/latest/mac-x64'>
-        <img src='https://github.com/janhq/docs/blob/main/static/img/mac.png' style="height:15px; width: 15px" />
-        <b>Intel</b>
-      </a>
-    </td>
-    <td style="text-align:center">
-      <a href='https://app.jan.ai/download/latest/mac-arm64'>
-        <img src='https://github.com/janhq/docs/blob/main/static/img/mac.png' style="height:15px; width: 15px" />
-        <b>M1/M2</b>
-      </a>
-    </td>
-    <td style="text-align:center">
-      <a href='https://app.jan.ai/download/latest/linux-amd64-deb'>
-        <img src='https://github.com/janhq/docs/blob/main/static/img/linux.png' style="height:14px; width: 14px" />
-        <b>jan.deb</b>
-      </a>
-    </td>
-    <td style="text-align:center">
-      <a href='https://app.jan.ai/download/latest/linux-amd64-appimage'>
-        <img src='https://github.com/janhq/docs/blob/main/static/img/linux.png' style="height:14px; width: 14px" />
-        <b>jan.AppImage</b>
-      </a>
-    </td>
-  </tr>
-  <tr style="text-align:center">
-    <td style="text-align:center"><b>Experimental (Nightly Build)</b></td>
-    <td style="text-align:center">
-      <a href='https://app.jan.ai/download/nightly/win-x64'>
-        <img src='https://github.com/janhq/docs/blob/main/static/img/windows.png' style="height:14px; width: 14px" />
-        <b>jan.exe</b>
-      </a>
-    </td>
-    <td style="text-align:center">
-      <a href='https://app.jan.ai/download/nightly/mac-x64'>
-        <img src='https://github.com/janhq/docs/blob/main/static/img/mac.png' style="height:15px; width: 15px" />
-        <b>Intel</b>
-      </a>
-    </td>
-    <td style="text-align:center">
-      <a href='https://app.jan.ai/download/nightly/mac-arm64'>
-        <img src='https://github.com/janhq/docs/blob/main/static/img/mac.png' style="height:15px; width: 15px" />
-        <b>M1/M2</b>
-      </a>
-    </td>
-    <td style="text-align:center">
-      <a href='https://app.jan.ai/download/nightly/linux-amd64-deb'>
-        <img src='https://github.com/janhq/docs/blob/main/static/img/linux.png' style="height:14px; width: 14px" />
-        <b>jan.deb</b>
-      </a>
-    </td>
-    <td style="text-align:center">
-      <a href='https://app.jan.ai/download/nightly/linux-amd64-appimage'>
-        <img src='https://github.com/janhq/docs/blob/main/static/img/linux.png' style="height:14px; width: 14px" />
-        <b>jan.AppImage</b>
-      </a>
-    </td>
-  </tr>
-</table>
-
-Download the latest version of Jan at https://jan.ai/ or visit the **[GitHub Releases](https://github.com/janhq/jan/releases)** to download any previous release.
-
-## Demo
-
-![Demo](/demo.gif)
-
-_Realtime Video: Jan v0.4.3-nightly on a Mac M1, 16GB Sonoma 14_
+Download the latest version of Newcoin OS in the **[GitHub Releases](https://github.com/janhq/jan/releases)**.
 
 ## Quicklinks
 
-#### Jan
+#### Newcoin OS
 
-- [Jan website](https://jan.ai/)
-- [Jan GitHub](https://github.com/janhq/jan)
+- [Newcoin OS website](https://newcoin.org/)
 - [User Guides](https://jan.ai/guides/)
 - [Developer docs](https://jan.ai/developer/)
 - [API reference](https://jan.ai/api-reference/)
@@ -138,7 +44,7 @@ Nitro is a high-efficiency C++ inference engine for edge computing. It is lightw
 
 ## Troubleshooting
 
-As Jan is in development mode, you might get stuck on a broken build.
+As Newcoin OS is in development mode, you might get stuck on a broken build.
 
 To reset your installation:
 
@@ -154,7 +60,7 @@ To reset your installation:
    kill -9 <PID>
    ```
 
-2. **Remove Jan from your Applications folder and Cache folder**
+2. **Remove Newcoin OS from your Applications folder and Cache folder**
 
    ```bash
    make clean
@@ -162,11 +68,11 @@ To reset your installation:
 
    This will remove all build artifacts and cached files:
 
-   - Delete Jan extension from your `~/jan/extensions` folder
+   - Delete Newcoin OS extension from your `~/newcoin/extensions` folder
    - Delete all `node_modules` in current folder
-   - Clear Application cache in `~/Library/Caches/jan`
+   - Clear Application cache in `~/Library/Caches/newcoin`
 
-## Requirements for running Jan
+## Requirements for running Newcoin OS
 
 - MacOS: 13 or higher
 - Windows:
@@ -197,11 +103,11 @@ Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) fi
 
    ```bash
    git clone https://github.com/janhq/jan
-   cd jan
+   cd newcoin
    git checkout -b DESIRED_BRANCH
    ```
 
-2. **Run development and use Jan Desktop**
+2. **Run development and use Newcoin OS Desktop**
 
    ```bash
    make dev
@@ -230,24 +136,24 @@ This will build the app MacOS m1/m2 for production (with code signing already do
 - Supported OS: Linux, WSL2 Docker
 - Pre-requisites:
 
-  - Docker Engine and Docker Compose are required to run Jan in Docker mode. Follow the [instructions](https://docs.docker.com/engine/install/ubuntu/) below to get started with Docker Engine on Ubuntu.
+  - Docker Engine and Docker Compose are required to run Newcoin OS in Docker mode. Follow the [instructions](https://docs.docker.com/engine/install/ubuntu/) below to get started with Docker Engine on Ubuntu.
 
     ```bash
     curl -fsSL https://get.docker.com -o get-docker.sh
     sudo sh ./get-docker.sh --dry-run
     ```
 
-  - If you intend to run Jan in GPU mode, you need to install `nvidia-driver` and `nvidia-docker2`. Follow the instruction [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) for installation.
+  - If you intend to run Newcoin OS in GPU mode, you need to install `nvidia-driver` and `nvidia-docker2`. Follow the instruction [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) for installation.
 
-- Run Jan in Docker mode
+- Run Newcoin OS in Docker mode
   > User can choose between `docker-compose.yml` with latest prebuilt docker image or `docker-compose-dev.yml` with local docker build
 
 | Docker compose Profile | Description                                  |
 | ---------------------- | -------------------------------------------- |
-| `cpu-fs`               | Run Jan in CPU mode with default file system |
-| `cpu-s3fs`             | Run Jan in CPU mode with S3 file system      |
-| `gpu-fs`               | Run Jan in GPU mode with default file system |
-| `gpu-s3fs`             | Run Jan in GPU mode with S3 file system      |
+| `cpu-fs`               | Run Newcoin OS in CPU mode with default file system |
+| `cpu-s3fs`             | Run Newcoin OS in CPU mode with S3 file system      |
+| `gpu-fs`               | Run Newcoin OS in GPU mode with default file system |
+| `gpu-s3fs`             | Run Newcoin OS in GPU mode with S3 file system      |
 
 | Environment Variable    | Description                                                                                             |
 | ----------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -256,9 +162,9 @@ This will build the app MacOS m1/m2 for production (with code signing already do
 | `AWS_SECRET_ACCESS_KEY` | AWS secret access key - leave blank for default file system                                             |
 | `AWS_ENDPOINT`          | AWS endpoint URL - leave blank for default file system                                                  |
 | `AWS_REGION`            | AWS region - leave blank for default file system                                                        |
-| `API_BASE_URL`          | Jan Server URL, please modify it as your public ip address or domain name default http://localhost:1377 |
+| `API_BASE_URL`          | Newcoin OS Server URL, please modify it as your public ip address or domain name default http://localhost:1377 |
 
-- **Option 1**: Run Jan in CPU mode
+- **Option 1**: Run Newcoin OS in CPU mode
 
   ```bash
   # cpu mode with default file system
@@ -268,7 +174,7 @@ This will build the app MacOS m1/m2 for production (with code signing already do
   docker compose --profile cpu-s3fs up -d
   ```
 
-- **Option 2**: Run Jan in GPU mode
+- **Option 2**: Run Newcoin OS in GPU mode
 
   - **Step 1**: Check CUDA compatibility with your NVIDIA driver by running `nvidia-smi` and check the CUDA version in the output
 
@@ -307,7 +213,7 @@ This will build the app MacOS m1/m2 for production (with code signing already do
 
   - **Step 3**: Update the `Dockerfile.gpu` line number 5 with the latest minor version of the image tag from step 2 (e.g. change `FROM nvidia/cuda:12.2.0-runtime-ubuntu22.04 AS base` to `FROM nvidia/cuda:12.1.0-runtime-ubuntu22.04 AS base`)
 
-  - **Step 4**: Run command to start Jan in GPU mode
+  - **Step 4**: Run command to start Newcoin OS in GPU mode
 
     ```bash
     # GPU mode with default file system
@@ -317,25 +223,18 @@ This will build the app MacOS m1/m2 for production (with code signing already do
     docker compose --profile gpu-s3fs up -d
     ```
 
-This will start the web server and you can access Jan at `http://localhost:3000`.
+This will start the web server and you can access Newcoin OS at `http://localhost:3000`.
 
 > Note: RAG feature is not supported in Docker mode with s3fs yet.
 
 ## Acknowledgements
 
-Jan builds on top of other open-source projects:
+Newcoin OS builds on top of other open-source projects:
 
 - [llama.cpp](https://github.com/ggerganov/llama.cpp)
 - [LangChain](https://github.com/langchain-ai)
 - [TensorRT](https://github.com/NVIDIA/TensorRT)
 - [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)
-
-## Contact
-
-- Bugs & requests: file a GitHub ticket
-- For discussion: join our Discord [here](https://discord.gg/FTk2MvZwJH)
-- For business inquiries: email hello@jan.ai
-- For jobs: please email hr@jan.ai
 
 ## Trust & Safety
 
@@ -348,4 +247,4 @@ Beware of scams.
 
 ## License
 
-Jan is free and open source, under the AGPLv3 license.
+Newcoin OS is free and open source, under the AGPLv3 license.
