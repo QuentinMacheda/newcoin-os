@@ -2,6 +2,8 @@
 
 import { useAtom, useSetAtom } from 'jotai'
 
+import LogoMark from '@/containers/Brand/Logo/Mark'
+
 import { EntryViewState } from '@/constants/entryScreens'
 
 import { entryViewStateAtom } from '@/helpers/atoms/App.atom'
@@ -15,13 +17,28 @@ const EntryScreen = () => {
   }
 
   return (
-    <div className="flex h-screen w-screen flex-1 overflow-hidden">
-      <div className="w-full">
-        <button onClick={() => onButtonClick(EntryViewState.ModeChoice)}>
-          Get started
-        </button>
+    <main className="relative min-h-screen">
+      <div className="flex h-12 p-10">ANIMATION</div>
+      <div className="absolute bottom-0 w-full p-6">
+        <div className="bg-newcoin-gray-bg flex w-full items-center justify-between rounded-xl px-10 py-8">
+          <div className="flex items-center gap-x-6">
+            <LogoMark width={58} height={58} />
+            <div>
+              <p className="text-xs font-normal uppercase leading-4">
+                Welcome to <br /> Newcoin OS - V ALPHA
+              </p>
+            </div>
+          </div>
+          <button
+            className="bg-newcoin-blue rounded-full bg-white px-11 py-2 text-base"
+            style={{ boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.25)' }}
+            onClick={() => onButtonClick(EntryViewState.ModeChoice)}
+          >
+            Get Started
+          </button>
+        </div>
       </div>
-    </div>
+    </main>
   )
 }
 
