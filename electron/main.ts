@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from 'electron'
+import { app, BrowserWindow, ipcMain, Menu } from 'electron'
 
 import { join } from 'path'
 /**
@@ -37,6 +37,10 @@ const rendererPath = join(__dirname, '..', 'renderer')
 const quickAskPath = join(rendererPath, 'search.html')
 
 const mainPath = join('file://', join(rendererPath, 'index.html'))
+
+const privateModeURL = 'http://localhost:3000/jan/'
+const privateModePath = join('file://', join(rendererPath, 'jan.html'))
+const onlineModeURL = 'https://os.newcoin.org'
 
 const mainUrl = 'http://localhost:3000'
 const quickAskUrl = `${mainUrl}/search`
@@ -77,6 +81,23 @@ app
         windowManager.showMainWindow()
       }
     })
+  })
+  .then(() => {
+    // Modify menu to go back to home
+    const modePath = app.isPackaged ? privateModePath : privateModeURL
+    const menu = Menu.getApplicationMenu()
+
+    if (menu) {
+      const submenu = menu.items[1]?.submenu
+      if (submenu) {
+        submenu.items[0].click = () => {
+          windowManager.mainWindow?.loadURL(modePath)
+        }
+        submenu.items[1].click = () => {
+          windowManager.mainWindow?.loadURL(onlineModeURL)
+        }
+      }
+    }
   })
 
 app.on('second-instance', (_event, _commandLine, _workingDirectory) => {
