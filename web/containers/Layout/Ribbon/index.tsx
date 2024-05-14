@@ -42,21 +42,6 @@ export default function RibbonNav() {
 
   const primaryMenus = [
     {
-      name: 'Home',
-      icon: (
-        <Link href="/">
-          <Home
-            size={20}
-            className={twMerge(
-              'flex-shrink-0 text-muted-foreground',
-              serverEnabled && 'text-gray-300 dark:text-gray-700'
-            )}
-          />
-        </Link>
-      ),
-      state: MainViewState.Home,
-    },
-    {
       name: 'Thread',
       icon: (
         <MessageCircleIcon
@@ -110,7 +95,9 @@ export default function RibbonNav() {
         <div className="flex h-full w-full flex-col items-center justify-between">
           <div>
             <div className="unselect mb-4">
-              <LogoMark width={28} height={28} className="mx-auto" />
+              <Link href="/" onClick={() => onMenuClick(MainViewState.Home)}>
+                <LogoMark width={28} height={28} className="mx-auto" />
+              </Link>
             </div>
             {primaryMenus
               .filter((primary) => !!primary)
