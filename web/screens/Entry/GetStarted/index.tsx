@@ -28,13 +28,13 @@ const EntryScreen = () => {
           <div className="flex items-center gap-x-6">
             <LogoMark width={58} height={58} />
             <div>
-              <p className="text-xs font-normal uppercase leading-4">
+              <p className="text-xs font-medium uppercase leading-4">
                 Welcome to <br /> Newcoin OS - V ALPHA
               </p>
             </div>
           </div>
           <button
-            className="bg-newcoin-blue rounded-full bg-white px-11 py-2 text-base"
+            className="bg-newcoin-blue rounded-full bg-white px-11 py-2 text-base font-medium"
             style={{ boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.25)' }}
             onClick={() => onButtonClick(EntryViewState.ModeChoice)}
           >
