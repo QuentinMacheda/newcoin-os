@@ -22,8 +22,6 @@ class WindowManager {
   createMainWindow(preloadPath: string, startUrl: string) {
     this.mainWindow = new BrowserWindow({
       ...mainWindowConfig,
-      minWidth: 768,
-      minHeight: 650,
       webPreferences: {
         nodeIntegration: true,
         preload: preloadPath,
