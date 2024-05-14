@@ -83,12 +83,12 @@ app
     })
   })
   .then(() => {
-    // Modify menu to go back to home
+    // Modify menu to switch between private and online mode
     const modePath = app.isPackaged ? privateModePath : privateModeURL
     const menu = Menu.getApplicationMenu()
 
     if (menu) {
-      const submenu = menu.items[1]?.submenu
+      const submenu = menu.items[0]?.submenu
       if (submenu) {
         submenu.items[0].click = () => {
           windowManager.mainWindow?.loadURL(modePath)
