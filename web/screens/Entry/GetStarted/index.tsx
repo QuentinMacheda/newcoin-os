@@ -4,6 +4,8 @@ import { useAtom, useSetAtom } from 'jotai'
 
 import LogoMark from '@/containers/Brand/Logo/Mark'
 
+import Video from '@/containers/Video'
+
 import { EntryViewState } from '@/constants/entryScreens'
 
 import { entryViewStateAtom } from '@/helpers/atoms/App.atom'
@@ -18,7 +20,9 @@ const EntryScreen = () => {
 
   return (
     <main className="relative min-h-screen">
-      <div className="flex h-12 p-10">ANIMATION</div>
+      <div className="flex items-center justify-center px-6 py-10">
+        <Video url="videos/welcome.mp4" />
+      </div>
       <div className="absolute bottom-0 w-full p-6">
         <div className="bg-newcoin-gray-bg flex w-full items-center justify-between rounded-xl px-10 py-8">
           <div className="flex items-center gap-x-6">
