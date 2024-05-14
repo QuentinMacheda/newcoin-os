@@ -54,17 +54,6 @@ const template: (Electron.MenuItemConstructorOptions | Electron.MenuItem)[] = [
     ],
   },
   {
-    label: 'Switch mode',
-    submenu: [
-      {
-        label: 'Private mode',
-      },
-      {
-        label: 'Online mode',
-      },
-    ],
-  },
-  {
     label: 'Edit',
     submenu: [
       { role: 'undo' },

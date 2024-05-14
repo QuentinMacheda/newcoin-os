@@ -47,10 +47,9 @@
   @font-face {
     font-family: 'Newfoundation Whyte';
     src:
-      url('../../public/fonts/newfoundation/NewfoundationWhyte-Regular.woff2')
+      url('/fonts/newfoundation/NewfoundationWhyte-Regular.woff2')
         format('woff2'),
-      url('../../public/fonts/newfoundation/NewfoundationWhyte-Regular.woff')
-        format('woff');
+      url('/fonts/newfoundation/NewfoundationWhyte-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -59,10 +58,9 @@
   @font-face {
     font-family: 'Newfoundation Whyte';
     src:
-      url('../../public/fonts/newfoundation/NewfoundationWhyte-Medium.woff2')
+      url('/fonts/newfoundation/NewfoundationWhyte-Medium.woff2')
         format('woff2'),
-      url('../../public/fonts/newfoundation/NewfoundationWhyte-Medium.woff')
-        format('woff');
+      url('/fonts/newfoundation/NewfoundationWhyte-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -71,10 +69,8 @@
   @font-face {
     font-family: 'Newfoundation Whyte';
     src:
-      url('../../public/fonts/newfoundation/NewfoundationWhyte-Light.woff2')
-        format('woff2'),
-      url('../../public/fonts/newfoundation/NewfoundationWhyte-Light.woff')
-        format('woff');
+      url('/fonts/newfoundation/NewfoundationWhyte-Light.woff2') format('woff2'),
+      url('/fonts/newfoundation/NewfoundationWhyte-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -83,10 +79,8 @@
   @font-face {
     font-family: 'Newfoundation Whyte Book';
     src:
-      url('../../public/fonts/newfoundation/NewfoundationWhyte-Book.woff2')
-        format('woff2'),
-      url('../../public/fonts/newfoundation/NewfoundationWhyte-Book.woff')
-        format('woff');
+      url('/fonts/newfoundation/NewfoundationWhyte-Book.woff2') format('woff2'),
+      url('/fonts/newfoundation/NewfoundationWhyte-Book.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -95,10 +89,8 @@
   @font-face {
     font-family: 'Newfoundation Whyte';
     src:
-      url('../../public/fonts/newfoundation/NewfoundationWhyte-Bold.woff2')
-        format('woff2'),
-      url('../../public/fonts/newfoundation/NewfoundationWhyte-Bold.woff')
-        format('woff');
+      url('/fonts/newfoundation/NewfoundationWhyte-Bold.woff2') format('woff2'),
+      url('/fonts/newfoundation/NewfoundationWhyte-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
