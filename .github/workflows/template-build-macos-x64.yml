@@ -15,28 +15,18 @@ on:
         required: true
         type: string
         default: ''
-      cloudflare_r2_path:
-        required: false
-        type: string
-        default: '/latest/'
     secrets:
-      CLOUDFLARE_R2_BUCKET_NAME:
-        required: false
-      CLOUDFLARE_R2_ACCESS_KEY_ID:
-        required: false
-      CLOUDFLARE_R2_SECRET_ACCESS_KEY:
-        required: false
-      CLOUDFLARE_ACCOUNT_ID:
-        required: false
       CODE_SIGN_P12_BASE64:
         required: false
       CODE_SIGN_P12_PASSWORD:
+        required: false
+      DEVELOPER_ID:
         required: false
       APPLE_ID:
         required: false
       APPLE_APP_SPECIFIC_PASSWORD:
         required: false
-      DEVELOPER_ID:
+      APPLE_TEAM_ID:
         required: false
 
 jobs:
@@ -58,22 +48,6 @@ jobs:
 
       - name: Install jq
         uses: dcarbone/install-jq-action@v2.0.1
-
-      - name: Update app version based on latest release tag with build number
-        if: inputs.public_provider != 'github'
-        run: |
-          echo "Version: ${{ inputs.new_version }}"
-          # Update the version in electron/package.json
-          jq --arg version "${{ inputs.new_version }}" '.version = $version' electron/package.json > /tmp/package.json
-          mv /tmp/package.json electron/package.json
-
-          jq --arg version "${{ inputs.new_version }}" '.version = $version' web/package.json > /tmp/package.json
-          mv /tmp/package.json web/package.json
-
-          jq --arg teamid "${{ secrets.APPLE_TEAM_ID }}" '.build.mac.notarize.teamId = $teamid' electron/package.json > /tmp/package.json
-          mv /tmp/package.json electron/package.json
-
-          cat electron/package.json
 
       - name: Update app version base on tag
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') && inputs.public_provider == 'github'
@@ -104,52 +78,23 @@ jobs:
           p12-file-base64: ${{ secrets.CODE_SIGN_P12_BASE64 }}
           p12-password: ${{ secrets.CODE_SIGN_P12_PASSWORD }}
 
-      - name: Build and publish app to cloudflare r2 or github artifactory
-        if: inputs.public_provider != 'github'
-        run: |
-          # check public_provider is true or not
-          echo "public_provider is ${{ inputs.public_provider }}"
-          if [ "${{ inputs.public_provider }}" == "none" ]; then
-            make build    
-          else
-            make build-and-publish
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CSC_LINK: '/tmp/codesign.p12'
-          CSC_KEY_PASSWORD: ${{ secrets.CODE_SIGN_P12_PASSWORD }}
-          CSC_IDENTITY_AUTO_DISCOVERY: 'true'
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
-          APP_PATH: '.'
-          DEVELOPER_ID: ${{ secrets.DEVELOPER_ID }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: auto
-          AWS_EC2_METADATA_DISABLED: 'true'
-
       - name: Build and publish app to github
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') && inputs.public_provider == 'github'
         run: |
           make build-and-publish
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # SIGNING
           CSC_LINK: '/tmp/codesign.p12'
           CSC_KEY_PASSWORD: ${{ secrets.CODE_SIGN_P12_PASSWORD }}
           CSC_IDENTITY_AUTO_DISCOVERY: 'true'
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          # SIGNING EXTENSIONS
           APP_PATH: '.'
           DEVELOPER_ID: ${{ secrets.DEVELOPER_ID }}
-          ANALYTICS_ID: ${{ secrets.JAN_APP_UMAMI_PROJECT_API_KEY }}
-          ANALYTICS_HOST: ${{ secrets.JAN_APP_UMAMI_URL }}
-
-      - name: Upload Artifact
-        if: inputs.public_provider != 'github'
-        uses: actions/upload-artifact@v2
-        with:
-          name: jan-mac-x64-${{ inputs.new_version }}
-          path: ./electron/dist/jan-mac-x64-${{ inputs.new_version }}.dmg
+          # NOTARIZE
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
