@@ -30,14 +30,14 @@ const EntryChoiceScreen = () => {
         <Link href={choicesList[0][0]} className="block h-full w-full">
           <ChoiceItem name={choicesList[0][1]} text={choicesList[0][2]} />
         </Link>
-        <button
+        <div
           onClick={() => {
             onClickMode(choicesList[1][0])
           }}
           className="block h-full w-full"
         >
           <ChoiceItem name={choicesList[1][1]} text={choicesList[1][2]} />
-        </button>
+        </div>
       </div>
     </main>
   )
