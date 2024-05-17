@@ -19,7 +19,7 @@ const EntryScreen = () => {
   }
 
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen bg-white">
       <div className="flex items-center justify-center px-6 py-10">
         <Video url="videos/welcome.mp4" />
       </div>

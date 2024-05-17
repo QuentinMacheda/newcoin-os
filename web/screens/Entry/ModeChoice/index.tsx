@@ -25,7 +25,7 @@ const EntryChoiceScreen = () => {
   const onClickMode = useLoadURL()
 
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen bg-white">
       <div className="flex h-screen w-screen gap-x-6 p-6">
         <Link href={choicesList[0][0]} className="block h-full w-full">
           <ChoiceItem name={choicesList[0][1]} text={choicesList[0][2]} />
