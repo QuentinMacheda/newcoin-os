@@ -14,6 +14,6 @@ export const mainWindowConfig: Electron.BrowserWindowConstructorOptions = {
     x: 10,
     y: 15,
   },
-  titleBarStyle: 'hiddenInset',
+  titleBarStyle: 'hidden',
   vibrancy: 'sidebar',
 }
