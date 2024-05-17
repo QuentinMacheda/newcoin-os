@@ -10,7 +10,7 @@ import ChoiceItem from '@/screens/Entry/ModeChoice/ChoiceItem'
 
 const choicesList = [
   [
-    '/jan',
+    '/jan.html', //Change to '/jan' if you're in development mode
     'Private Mode',
     'Run the OS on your local computer. This mode is not connected to the Internet, which means all the data is private.',
   ],
