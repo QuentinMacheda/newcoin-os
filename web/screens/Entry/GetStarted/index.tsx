@@ -24,17 +24,19 @@ const EntryScreen = () => {
         <Video url="videos/welcome.mp4" />
       </div>
       <div className="absolute bottom-0 w-full p-6">
-        <div className="bg-newcoin-gray-bg flex w-full items-center justify-between rounded-xl px-10 py-8">
+        <div className="flex w-full items-center justify-between rounded-xl bg-newcoin-gray-bg px-10 py-8">
           <div className="flex items-center gap-x-6">
-            <LogoMark width={58} height={58} />
+            <div className="dark:invert">
+              <LogoMark width={58} height={58} />
+            </div>
             <div>
-              <p className="text-xs font-medium uppercase leading-4">
+              <p className="text-xs font-medium uppercase leading-4 dark:text-black">
                 Welcome to <br /> Newcoin OS - V ALPHA
               </p>
             </div>
           </div>
           <button
-            className="bg-newcoin-blue rounded-full bg-white px-11 py-2 text-base font-medium"
+            className="bg-newcoin-blue rounded-full bg-white px-11 py-2 text-base font-medium dark:text-black"
             style={{ boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.25)' }}
             onClick={() => onButtonClick(EntryViewState.ModeChoice)}
           >
