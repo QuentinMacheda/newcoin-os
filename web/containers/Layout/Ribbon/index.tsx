@@ -94,14 +94,13 @@ export default function RibbonNav() {
       <div className="mt-2 flex h-full w-full flex-col items-center justify-between">
         <div className="flex h-full w-full flex-col items-center justify-between">
           <div>
-            <div className="unselect mb-4">
-              <div
-                onClick={() => {
-                  onMenuClick(MainViewState.GetStarted)
-                }}
-              >
-                <LogoMark width={28} height={28} className="mx-auto" />
-              </div>
+            <div
+              className="unselect mb-4 cursor-pointer"
+              onClick={() => {
+                onMenuClick(MainViewState.GetStarted)
+              }}
+            >
+              <LogoMark width={28} height={28} className="mx-auto" />
             </div>
             {primaryMenus
               .filter((primary) => !!primary)

@@ -7,7 +7,7 @@ type Props = {
 
 const ChoiceItem: React.FC<Props> = ({ name, text }) => {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-y-8 rounded-xl bg-newcoin-gray-bg text-center">
+    <div className="flex h-full w-full cursor-pointer flex-col items-center justify-center gap-y-8 rounded-xl bg-newcoin-gray-bg text-center">
       <h3 className="text-2xl dark:text-black">{name}</h3>
       <p className="w-36 text-xs dark:text-black">{text}</p>
     </div>
