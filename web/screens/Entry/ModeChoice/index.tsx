@@ -1,53 +1,55 @@
 'use client'
 
-import React from 'react'
-
 import Link from 'next/link'
 
-import {
-  onlineModeURL,
-  privateModePath,
-  privateModeURL,
-} from 'newcoin/constants/pathsToApp'
+import { useAtom, useSetAtom } from 'jotai'
+
+import { MainViewState } from '@/constants/screens'
 
 import { useLoadURL } from '@/hooks/useLoadURL'
 
 import ChoiceItem from '@/screens/Entry/ModeChoice/ChoiceItem'
 
+import { mainViewStateAtom } from '@/helpers/atoms/App.atom'
+
 const choicesList = [
   [
-    privateModePath, //Change to { privateModeURL } if you're in development mode
     'Private Mode',
     'Run the OS on your local computer. This mode is not connected to the Internet, which means all the data is private.',
   ],
   [
-    onlineModeURL,
     'Online Mode',
     'Data will be stored on a remote server. You still have control over who can access it and you can decide to monetize your data.',
   ],
 ]
 
 const EntryChoiceScreen = () => {
+  const [mainViewState, setMainViewState] = useAtom(mainViewStateAtom)
   const onClickMode = useLoadURL()
+
+  const onCardClick = (state: MainViewState) => {
+    if (mainViewState === state) return
+    setMainViewState(state)
+  }
 
   return (
     <main className="relative min-h-screen bg-white">
       <div className="flex h-screen w-screen gap-x-6 p-6">
         <div
           onClick={() => {
-            onClickMode(choicesList[0][0])
+            onCardClick(MainViewState.Thread)
           }}
           className="block h-full w-full"
         >
-          <ChoiceItem name={choicesList[0][1]} text={choicesList[0][2]} />
+          <ChoiceItem name={choicesList[0][0]} text={choicesList[0][1]} />
         </div>
         <div
           onClick={() => {
-            onClickMode(choicesList[1][0])
+            onClickMode('https://os.newcoin.org')
           }}
           className="block h-full w-full"
         >
-          <ChoiceItem name={choicesList[1][1]} text={choicesList[1][2]} />
+          <ChoiceItem name={choicesList[1][0]} text={choicesList[1][1]} />
         </div>
       </div>
     </main>

@@ -1,12 +1,19 @@
 import { atom } from 'jotai'
 
-import { EntryViewState } from '@/constants/entryScreens'
 import { MainViewState } from '@/constants/screens'
 
-export const mainViewStateAtom = atom<MainViewState>(MainViewState.Thread)
+let defaultMainViewstate = MainViewState.GetStarted
 
-export const entryViewStateAtom = atom<EntryViewState>(
-  EntryViewState.GetStarted
-)
+if (!localStorage.getItem('firstLaunch')) {
+  localStorage.setItem('firstLaunch', 'true')
+} else {
+  if (localStorage.getItem('firstLaunch') === 'false') {
+    defaultMainViewstate = MainViewState.Thread
+  } else {
+    defaultMainViewstate = MainViewState.GetStarted
+  }
+}
+
+export const mainViewStateAtom = atom<MainViewState>(defaultMainViewstate)
 
 export const defaultJanDataFolderAtom = atom<string>('')

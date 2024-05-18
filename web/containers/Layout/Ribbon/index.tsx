@@ -18,15 +18,11 @@ import {
   Home,
 } from 'lucide-react'
 
-import { mainPath } from 'newcoin/constants/pathsToApp'
-
 import { twMerge } from 'tailwind-merge'
 
 import LogoMark from '@/containers/Brand/Logo/Mark'
 
 import { MainViewState } from '@/constants/screens'
-
-import { useLoadURL } from '@/hooks/useLoadURL'
 
 import { mainViewStateAtom } from '@/helpers/atoms/App.atom'
 import { editMessageAtom } from '@/helpers/atoms/ChatMessage.atom'
@@ -36,7 +32,6 @@ export default function RibbonNav() {
   const [mainViewState, setMainViewState] = useAtom(mainViewStateAtom)
   const [serverEnabled] = useAtom(serverEnabledAtom)
   const setEditMessage = useSetAtom(editMessageAtom)
-  const onLogoClick = useLoadURL()
 
   const onMenuClick = (state: MainViewState) => {
     if (mainViewState === state) return
@@ -99,15 +94,13 @@ export default function RibbonNav() {
       <div className="mt-2 flex h-full w-full flex-col items-center justify-between">
         <div className="flex h-full w-full flex-col items-center justify-between">
           <div>
-            <div className="unselect mb-4">
-              <div
-                onClick={() => {
-                  onLogoClick(mainPath)
-                  onMenuClick(MainViewState.Home)
-                }}
-              >
-                <LogoMark width={28} height={28} className="mx-auto" />
-              </div>
+            <div
+              className="unselect mb-4 cursor-pointer"
+              onClick={() => {
+                onMenuClick(MainViewState.GetStarted)
+              }}
+            >
+              <LogoMark width={28} height={28} className="mx-auto" />
             </div>
             {primaryMenus
               .filter((primary) => !!primary)
