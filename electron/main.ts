@@ -28,22 +28,11 @@ import { setupReactDevTool } from './utils/dev'
 import { trayManager } from './managers/tray'
 import { logSystemInfo } from './utils/system'
 import { registerGlobalShortcuts } from './utils/shortcut'
+import { preloadPath, rendererPath, onlineModeURL, mainPath, privateModePath, quickAskPath, mainUrl, privateModeURL, quickAskUrl } from './constants/pathsToApp'
 
 /**
  * Paths
  **/
-const preloadPath = join(__dirname, 'preload.js')
-const rendererPath = join(__dirname, '..', 'renderer')
-const quickAskPath = join(rendererPath, 'search.html')
-
-const mainPath = join('file://', join(rendererPath, 'index.html'))
-
-const privateModeURL = 'http://localhost:3000/jan/'
-const privateModePath = join('file://', join(rendererPath, 'jan.html'))
-const onlineModeURL = 'https://os.newcoin.org'
-
-const mainUrl = 'http://localhost:3000'
-const quickAskUrl = `${mainUrl}/search`
 
 const gotTheLock = app.requestSingleInstanceLock()
 
