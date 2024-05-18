@@ -41,7 +41,6 @@ const mainPath = join('file://', join(rendererPath, 'index.html'))
 const quickAskPath = join(rendererPath, 'search.html')
 
 const mainUrl = 'http://localhost:3000'
-const privateModeUrl = 'http://localhost:3000/jan/'
 const quickAskUrl = `${mainUrl}/search`
 
 const gotTheLock = app.requestSingleInstanceLock()
@@ -83,7 +82,7 @@ app
   })
   .then(() => {
     // Modify menu to switch between private and online mode
-    const modePath = app.isPackaged ? mainPath : privateModeUrl
+    const modePath = app.isPackaged ? mainPath : mainUrl
     const menu = Menu.getApplicationMenu()
 
     if (menu) {
