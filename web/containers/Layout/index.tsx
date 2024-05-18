@@ -47,6 +47,11 @@ const BaseLayout = () => {
     }
   }, [setMainViewState])
 
+  // Set the first launch to false to skip the entry screens
+  if (localStorage.getItem('firstLaunch')) {
+    localStorage.setItem('firstLaunch', 'false')
+  }
+
   if (
     mainViewState === MainViewState.GetStarted ||
     mainViewState === MainViewState.ModeChoice
