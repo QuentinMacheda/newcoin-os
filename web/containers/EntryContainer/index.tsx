@@ -3,24 +3,24 @@ import React from 'react'
 
 import { useAtomValue } from 'jotai'
 
-import { EntryViewState } from '@/constants/entryScreens'
+import { MainViewState } from '@/constants/screens'
 
 import GetStartedScreen from '@/screens/Entry/GetStarted'
 import ModeChoiceScreen from '@/screens/Entry/ModeChoice'
 
-import { entryViewStateAtom } from '@/helpers/atoms/App.atom'
+import { mainViewStateAtom } from '@/helpers/atoms/App.atom'
 
 const EntryContainer: React.FC = () => {
-  const entryViewState = useAtomValue(entryViewStateAtom)
+  const mainViewState = useAtomValue(mainViewStateAtom)
 
   let children = null
 
-  switch (entryViewState) {
-    case EntryViewState.GetStarted:
+  switch (mainViewState) {
+    case MainViewState.GetStarted:
       children = <GetStartedScreen />
       break
 
-    case EntryViewState.ModeChoice:
+    case MainViewState.ModeChoice:
       children = <ModeChoiceScreen />
       break
 

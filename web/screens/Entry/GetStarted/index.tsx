@@ -6,16 +6,16 @@ import LogoMark from '@/containers/Brand/Logo/Mark'
 
 import Video from '@/containers/Video'
 
-import { EntryViewState } from '@/constants/entryScreens'
+import { MainViewState } from '@/constants/screens'
 
-import { entryViewStateAtom } from '@/helpers/atoms/App.atom'
+import { mainViewStateAtom } from '@/helpers/atoms/App.atom'
 
 const EntryScreen = () => {
-  const [entryViewState, setEntryViewState] = useAtom(entryViewStateAtom)
+  const [mainViewState, setMainViewState] = useAtom(mainViewStateAtom)
 
-  const onButtonClick = (state: EntryViewState) => {
-    if (entryViewState === state) return
-    setEntryViewState(state)
+  const onButtonClick = (state: MainViewState) => {
+    if (mainViewState === state) return
+    setMainViewState(state)
   }
 
   return (
@@ -38,7 +38,7 @@ const EntryScreen = () => {
           <button
             className="bg-newcoin-blue rounded-full bg-white px-11 py-2 text-base font-medium dark:text-black"
             style={{ boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.25)' }}
-            onClick={() => onButtonClick(EntryViewState.ModeChoice)}
+            onClick={() => onButtonClick(MainViewState.ModeChoice)}
           >
             Get Started
           </button>

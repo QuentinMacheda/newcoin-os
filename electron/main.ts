@@ -28,11 +28,21 @@ import { setupReactDevTool } from './utils/dev'
 import { trayManager } from './managers/tray'
 import { logSystemInfo } from './utils/system'
 import { registerGlobalShortcuts } from './utils/shortcut'
-import { preloadPath, rendererPath, onlineModeURL, mainPath, privateModePath, quickAskPath, mainUrl, privateModeURL, quickAskUrl } from './constants/pathsToApp'
 
 /**
  * Paths
  **/
+
+const preloadPath = join(__dirname, 'preload.js')
+const rendererPath = join(__dirname, '..', 'renderer')
+const onlineModeUrl = 'https://os.newcoin.org'
+
+const mainPath = join('file://', join(rendererPath, 'index.html'))
+const quickAskPath = join(rendererPath, 'search.html')
+
+const mainUrl = 'http://localhost:3000'
+const privateModeUrl = 'http://localhost:3000/jan/'
+const quickAskUrl = `${mainUrl}/search`
 
 const gotTheLock = app.requestSingleInstanceLock()
 
@@ -73,7 +83,7 @@ app
   })
   .then(() => {
     // Modify menu to switch between private and online mode
-    const modePath = app.isPackaged ? privateModePath : privateModeURL
+    const modePath = app.isPackaged ? mainPath : privateModeUrl
     const menu = Menu.getApplicationMenu()
 
     if (menu) {
@@ -83,7 +93,7 @@ app
           windowManager.mainWindow?.loadURL(modePath)
         }
         submenu.items[1].click = () => {
-          windowManager.mainWindow?.loadURL(onlineModeURL)
+          windowManager.mainWindow?.loadURL(onlineModeUrl)
         }
       }
     }

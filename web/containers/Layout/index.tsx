@@ -7,6 +7,7 @@ import { motion as m } from 'framer-motion'
 
 import { useAtom, useAtomValue } from 'jotai'
 
+import EntryContainer from '@/containers/EntryContainer'
 import BottomBar from '@/containers/Layout/BottomBar'
 import RibbonNav from '@/containers/Layout/Ribbon'
 
@@ -46,39 +47,45 @@ const BaseLayout = () => {
     }
   }, [setMainViewState])
 
-  return (
-    <div className="flex h-screen w-screen flex-1 overflow-hidden">
-      <RibbonNav />
-      <div className=" relative top-12 flex h-[calc(100vh-96px)] w-full overflow-hidden bg-background">
-        <div className="w-full">
-          <TopBar />
-          <m.div
-            key={mainViewState}
-            initial={{ opacity: 0, y: -8 }}
-            className="h-full"
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                duration: 0.5,
-              },
-            }}
-          >
-            <MainViewContainer />
-          </m.div>
-          <BottomBar />
-        </div>
-      </div>
-      {importModelStage === 'SELECTING_MODEL' && <SelectingModelModal />}
-      {importModelStage === 'MODEL_SELECTED' && <ImportModelOptionModal />}
-      {importModelStage === 'IMPORTING_MODEL' && <ImportingModelModal />}
-      {importModelStage === 'EDIT_MODEL_INFO' && <EditModelInfoModal />}
-      {importModelStage === 'CONFIRM_CANCEL' && <CancelModelImportModal />}
-      <ChooseWhatToImportModal />
-      <InstallingExtensionModal />
-      <HuggingFaceRepoDetailModal />
-    </div>
+  if (
+    mainViewState === MainViewState.GetStarted ||
+    mainViewState === MainViewState.ModeChoice
   )
+    return <EntryContainer />
+  else
+    return (
+      <div className="flex h-screen w-screen flex-1 overflow-hidden">
+        <RibbonNav />
+        <div className=" relative top-12 flex h-[calc(100vh-96px)] w-full overflow-hidden bg-background">
+          <div className="w-full">
+            <TopBar />
+            <m.div
+              key={mainViewState}
+              initial={{ opacity: 0, y: -8 }}
+              className="h-full"
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+            >
+              <MainViewContainer />
+            </m.div>
+            <BottomBar />
+          </div>
+        </div>
+        {importModelStage === 'SELECTING_MODEL' && <SelectingModelModal />}
+        {importModelStage === 'MODEL_SELECTED' && <ImportModelOptionModal />}
+        {importModelStage === 'IMPORTING_MODEL' && <ImportingModelModal />}
+        {importModelStage === 'EDIT_MODEL_INFO' && <EditModelInfoModal />}
+        {importModelStage === 'CONFIRM_CANCEL' && <CancelModelImportModal />}
+        <ChooseWhatToImportModal />
+        <InstallingExtensionModal />
+        <HuggingFaceRepoDetailModal />
+      </div>
+    )
 }
 
 export default BaseLayout
