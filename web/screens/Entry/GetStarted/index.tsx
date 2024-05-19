@@ -1,5 +1,7 @@
 'use client'
 
+import React, { useEffect } from 'react'
+
 import { useAtom, useSetAtom } from 'jotai'
 
 import LogoMark from '@/containers/Brand/Logo/Mark'
@@ -17,6 +19,11 @@ const EntryScreen = () => {
     if (mainViewState === state) return
     setMainViewState(state)
   }
+
+  useEffect(() => {
+    if (sessionStorage.getItem('firstLaunch'))
+      setMainViewState(MainViewState.Thread)
+  }, [mainViewState])
 
   return (
     <main className="relative min-h-screen bg-white">

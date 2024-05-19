@@ -24,6 +24,8 @@ import LogoMark from '@/containers/Brand/Logo/Mark'
 
 import { MainViewState } from '@/constants/screens'
 
+import { useLoadURL } from '@/hooks/useLoadURL'
+
 import { mainViewStateAtom } from '@/helpers/atoms/App.atom'
 import { editMessageAtom } from '@/helpers/atoms/ChatMessage.atom'
 import { serverEnabledAtom } from '@/helpers/atoms/LocalServer.atom'
@@ -32,6 +34,8 @@ export default function RibbonNav() {
   const [mainViewState, setMainViewState] = useAtom(mainViewStateAtom)
   const [serverEnabled] = useAtom(serverEnabledAtom)
   const setEditMessage = useSetAtom(editMessageAtom)
+
+  const onLogoClick = useLoadURL()
 
   const onMenuClick = (state: MainViewState) => {
     if (mainViewState === state) return
@@ -97,7 +101,7 @@ export default function RibbonNav() {
             <div
               className="unselect mb-4 cursor-pointer"
               onClick={() => {
-                onMenuClick(MainViewState.GetStarted)
+                onLogoClick('https://os.newcoin.org')
               }}
             >
               <LogoMark width={28} height={28} className="mx-auto" />

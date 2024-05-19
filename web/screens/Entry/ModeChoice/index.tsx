@@ -32,6 +32,9 @@ const EntryChoiceScreen = () => {
     setMainViewState(state)
   }
 
+  if (!sessionStorage.getItem('firstLaunch'))
+    sessionStorage.setItem('firstLaunch', 'false')
+
   return (
     <main className="relative min-h-screen bg-white">
       <div className="flex h-screen w-screen gap-x-6 p-6">
