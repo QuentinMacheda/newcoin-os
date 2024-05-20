@@ -1,6 +1,5 @@
 {
   "name": "newcoin-os",
-  "author": "Sofiane Delloue <sofiane@new.foundation>",
   "private": true,
   "workspaces": {
     "packages": [
