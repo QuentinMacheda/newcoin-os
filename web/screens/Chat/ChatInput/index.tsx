@@ -329,7 +329,7 @@ const ChatInput: React.FC = () => {
       ) : (
         <Button
           size="lg"
-          themes="danger"
+          themes="primary"
           onClick={onStopInferenceClick}
           className="min-w-[100px]"
         >

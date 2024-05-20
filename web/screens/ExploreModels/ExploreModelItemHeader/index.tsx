@@ -109,7 +109,7 @@ const ExploreModelItemHeader: React.FC<Props> = ({ model, onClick, open }) => {
       <Tooltip>
         <TooltipTrigger>
           <Button
-            themes="secondaryBlue"
+            themes="secondary"
             className="min-w-[98px]"
             onClick={onUseModelClick}
             disabled={serverEnabled}

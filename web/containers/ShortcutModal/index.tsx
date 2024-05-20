@@ -57,7 +57,7 @@ const ShortcutModal: React.FC = () => (
   <Modal>
     <ModalTrigger>
       <div>
-        <Button size="sm" themes="secondaryBlue">
+        <Button size="sm" themes="primary">
           Show
         </Button>
       </div>
