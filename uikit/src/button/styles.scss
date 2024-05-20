@@ -9,7 +9,11 @@
   }
 
   &-secondary-blue {
-    @apply bg-primary/70 hover:bg-primary/60 dark:hover:bg-primary/60 text-white;
+    @apply bg-newcoin-green/20 hover:bg-newcoin-green/10 dark:hover:bg-newcoin-green/10 text-newcoin-green;
+  }
+
+  &-tiertary-blue {
+    @apply bg-newcoin-green/20 hover:bg-newcoin-green/30 dark:hover:bg-newcoin-green/30 text-newcoin-green;
   }
 
   &-danger {
@@ -76,6 +80,9 @@
   &.btn-secondary-blue {
     @apply bg-blue-200 text-blue-900 hover:bg-blue-200/80;
     @apply disabled:pointer-events-none disabled:bg-zinc-100 disabled:text-zinc-400;
+  }
+  &.btn-tiertary-blue {
+    @apply bg-newcoin-green/20 hover:bg-newcoin-green/30 dark:hover:bg-newcoin-green/30 text-newcoin-green;
   }
   &.btn-danger {
     @apply bg-danger hover:bg-danger/90;

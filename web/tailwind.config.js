@@ -56,6 +56,8 @@ module.exports = {
       },
       colors: {
         'newcoin-gray-bg': '#F3F3F3',
+        'newcoin-green': '#bce935',
+
         'background': 'hsl(var(--background))',
         'foreground': 'hsl(var(--foreground))',
 

@@ -54,11 +54,11 @@ const ModalCancelDownload: React.FC<Props> = ({ model, isFromList }) => {
             {cancelText}
           </Button>
         ) : (
-          <Button themes="secondaryBlue">
+          <Button themes="tiertaryBlue">
             <div className="flex items-center space-x-2">
               <span className="inline-block">Cancel</span>
               <Progress
-                className="inline-block h-2 w-[80px] bg-blue-100"
+                className="inline-block h-2 w-[80px]"
                 value={
                   formatDownloadPercentage(downloadState?.percent, {
                     hidePercentage: true,

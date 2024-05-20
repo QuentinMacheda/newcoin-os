@@ -26,6 +26,8 @@ module.exports = {
       'border': 'hsl(var(--border))',
       'input': 'hsl(var(--input))',
       'ring': 'hsl(var(--ring))',
+
+      'newcoin-green': 'hsl(var(--newcoin-green))',
     },
   },
   plugins: [],
