@@ -13,6 +13,8 @@ jobs:
       version: ${{ steps.get_version.outputs.version }}
     permissions:
       contents: write
+      pull-requests: write
+      repository-projects: write
     steps:
       - name: Extract tag name without v prefix
         id: get_version
